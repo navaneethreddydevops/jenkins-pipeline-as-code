@@ -12,6 +12,11 @@ pipeline {
                 sh 'python3 --version'
             }
         }
+        stage('Maven Version') {
+            steps {
+                sh 'mvn -version'
+            }
+        }
         stage('Terraform Version') {
             steps {
                 sh 'terraform --version'
