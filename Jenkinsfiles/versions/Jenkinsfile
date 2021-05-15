@@ -2,19 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Maven Version') {
+        stage('Java Version') {
             steps {
-                sh 'mvn -version'
+                sh 'java -version'
             }
         }
         stage('Python3 Version') {
             steps {
                 sh 'python3 --version'
-            }
-        }
-        stage('Java Version') {
-            steps {
-                sh 'java -version'
             }
         }
         stage('Terraform Version') {
